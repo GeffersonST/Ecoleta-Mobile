@@ -1,5 +1,13 @@
 import React from "react";
-import { View, ImageBackground, Text, Image, StyleSheet } from "react-native";
+import { Feather as Icon } from "@expo/vector-icons";
+import {
+  View,
+  ImageBackground,
+  Text,
+  Image,
+  StyleSheet,
+  Button,
+} from "react-native";
 
 const Home = () => {
   return (
@@ -16,7 +24,21 @@ const Home = () => {
         </Text>
       </View>
 
-      <View style={styles.footer}></View>
+      <View style={styles.footer}>
+        <Button
+          onPress={() => {}}
+          title="Learn More"
+          color="#34CB79"
+          accessibilityLabel="Learn more about this purple button"
+        >
+          <View style={styles.buttonIcon}>
+            <Text>
+              <Icon name="arrow-right" color="#FFF" size={24} />
+            </Text>
+          </View>
+          <Text style={styles.buttonText}>Entrar</Text>
+        </Button>
+      </View>
     </ImageBackground>
   );
 };
